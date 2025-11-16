@@ -98,8 +98,7 @@
 
 <script>
 
-const API_URL = "https://your-render-app.onrender.com/chat";
-
+const API_URL = "https://chat-eight-gamma-39.vercel.app/chat";
 window.onload = () => {
     let history = JSON.parse(localStorage.getItem("chatHistory")) || [];
     history.forEach(msg => addMessage(msg.text, msg.sender, false));
