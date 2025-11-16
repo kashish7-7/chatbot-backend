@@ -98,7 +98,8 @@
 
 <script>
 
-const API_URL = "https://chatbot-backend-bg83.onrender.com";
+const API_URL = "https://chatbot-backend-bg83.onrender.com/chat";
+
 window.onload = () => {
     let history = JSON.parse(localStorage.getItem("chatHistory")) || [];
     history.forEach(msg => addMessage(msg.text, msg.sender, false));

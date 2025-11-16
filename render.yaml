@@ -2,8 +2,11 @@ services:
   - type: web
     name: chatbot-backend
     env: python
-    region: singapore
     plan: free
-    buildCommand: "pip install -r requirements.txt"
+    pythonVersion: 3.9
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
     startCommand: "uvicorn api.index:app --host 0.0.0.0 --port $PORT"
-    pythonVersion: "3.10"
+    envVars:
+      - key: GROQ_API_KEY
+        scope: run
+        sync: false
